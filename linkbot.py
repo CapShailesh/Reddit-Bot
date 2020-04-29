@@ -13,10 +13,10 @@ import enchant
 # create the objects from the imported modules
 
 # reddit api login
-reddit = praw.Reddit(client_id='KxOAB4O72F13yw',
-                     client_secret='4oAfqabyhhZ5rHbkicmRUxANnQ4',
-                     username='testbotsh',
-                     password='testbotsh',
+reddit = praw.Reddit(client_id='',      #present under preferences/apps at reddit
+                     client_secret='', #present under preferences/apps at reddit
+                     username='',       #username of reddit
+                     password='',        #password for that account
                      user_agent='testbot by /u/CapShailesh')
 
 subreddit = reddit.subreddit('dankmemes')
@@ -30,5 +30,4 @@ for comment in subreddit.stream.comments():
             print('posted to ' + comment.author.name)
         except:
             print('to frequent' + comment.author.name + submission.url)
-       # Output: the URL the submission points to
-                         # or the submission's URL if it's a self post
+      
